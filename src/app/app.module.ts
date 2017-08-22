@@ -1,4 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { ApiModule } from './api.module';
+import { DefaultService } from './api/default.service'
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -8,9 +10,10 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ApiModule
   ],
-  providers: [],
+  providers: [DefaultService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
